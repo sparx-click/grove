@@ -79,9 +79,9 @@ function createChart() {
   if (amount >= 0) {
     // Changed from > to >= to include zero
     // Calculate data points
-    const dataA = Array.from({ length: years + 1 }, (_, i) => amount * Math.pow(1.3, i));
+    const dataA = Array.from({ length: years + 1 }, (_, i) => amount * Math.pow(1.25, i));
     const dataB = Array.from({ length: years + 1 }, (_, i) => amount * Math.pow(1.18, i));
-    const dataC = Array.from({ length: years + 1 }, (_, i) => amount * Math.pow(1.11, i));
+    const dataC = Array.from({ length: years + 1 }, (_, i) => amount * Math.pow(1.12, i));
 
     // Find maximum value for scale
     const maxValue = Math.max(...dataA);
@@ -102,7 +102,7 @@ function createChart() {
           {
             data: dataA,
             borderColor: "rgb(0, 67, 160)",
-            backgroundColor: "rgba(0, 107, 255, 0.15)",
+            backgroundColor: "rgba(38, 153, 73, 0.25)",
             tension: 0.4,
             pointRadius: 0,
             borderWidth: 2,
@@ -111,7 +111,7 @@ function createChart() {
           {
             data: dataB,
             borderColor: "rgb(0, 67, 160)",
-            backgroundColor: "rgba(0, 102, 243, 0.08)",
+            backgroundColor: "rgba(124, 176, 78, 0.25)",
             tension: 0.4,
             pointRadius: 0,
             borderWidth: 2,

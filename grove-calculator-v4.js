@@ -197,9 +197,9 @@ function updateValues() {
   if (amount >= 0) {
     // Changed from > to >= to include zero
     // Calculate values
-    const valueA = amount * Math.pow(1.3, years);
+    const valueA = amount * Math.pow(1.25, years);
     const valueB = amount * Math.pow(1.18, years);
-    const valueC = amount * Math.pow(1.11, years);
+    const valueC = amount * Math.pow(1.12, years);
 
     // Calculate differences
     const diffAB = valueA - valueB;
